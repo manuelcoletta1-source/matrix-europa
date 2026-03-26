@@ -12,7 +12,7 @@ Torino - Brussels
 
 MATRIX EUROPA is an operational infrastructure project focused on verifiable execution across digital, institutional, and autonomous systems.
 
-The repository documents and prototypes a European model built around four core layers:
+The repository is built around four core layers:
 
 - **IPR** — persistent operational identity
 - **TRAC** — verifiable continuity between events
@@ -25,17 +25,17 @@ The project addresses a structural gap in current digital systems:
 
 ---
 
-## Repository Purpose
+## Purpose of the Repository
 
-This repository is not only a manuscript archive.
+This repository is the root framework of the MATRIX cycle.
 
-It is intended to evolve into a demonstrative infrastructure repository containing:
+It is intended to contain:
 
 - strategic documentation
+- architectural logic
 - technical specifications
-- runtime prototypes
-- event examples
-- deployment logic
+- operational prototypes
+- deployment logic for European federation
 
 ---
 
@@ -83,14 +83,66 @@ Execution runtime enforcing constrained and fail-closed decision paths.
 
 ---
 
-## Repository Structure
+## Repository Position
 
-```text
-matrix-europa/
-├── README.md
-├── LICENSE
-├── BOOK.md
-├── docs/
-├── specs/
-├── runtime/
-└── examples/
+This repository is not only a manuscript space.
+
+It is the root repository of the MATRIX framework and the strategic entry point for:
+
+- European infrastructure positioning
+- pilot framing
+- architectural documentation
+- future technical expansion
+
+---
+
+## Deployment Logic
+
+The intended deployment sequence is:
+
+1. **Turin**  
+   Technical pilot node
+
+2. **Piedmont / Italy**  
+   Territorial replication and coordination
+
+3. **Brussels**  
+   Institutional integration and European alignment
+
+4. **European Federation**  
+   Multi-node operational infrastructure
+
+---
+
+## Current Status
+
+The project is currently positioned as:
+
+- a strategic infrastructure framework
+- an architectural model for verifiable execution
+- a basis for future technical and institutional activation
+
+---
+
+## Author
+
+**Manuel Coletta**  
+HBCE Research  
+HERMETICUM B.C.E. S.r.l.
+
+Personal email: `manuelcoletta1@gmail.com`  
+PEC: `manuelcoletta@domiciliodigitale.com`
+
+---
+
+## Institutional Note
+
+This repository is an independent research and infrastructure initiative.
+
+It is designed to support:
+
+- technical evaluation
+- pilot activation
+- institutional dialogue
+- European program alignment
+- future standardization work
