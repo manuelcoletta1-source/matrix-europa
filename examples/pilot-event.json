@@ -1,8 +1,9 @@
 {
   "eventId": "EVT-0001",
+  "timestamp": "2026-03-26T12:00:00.000Z",
   "identity": "IPR-0001",
+  "intent": "pilot.initialization",
   "decision": "ALLOW",
-  "timestamp": "2026-03-26T12:00:00Z",
   "prevHash": null,
-  "hash": "example_hash_1"
+  "hash": "9a4c2b9c8e58a4b7b9ab2a1b4b9a7e8f01b8c9d43f9d1b0d7e6f8c2a4b1d3e5f"
 }
