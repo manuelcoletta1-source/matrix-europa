@@ -1,0 +1,38 @@
+{
+  "chain": [
+    {
+      "eventId": "EVT-0001",
+      "timestamp": "2026-03-26T12:00:00.000Z",
+      "identity": "IPR-0001",
+      "intent": "pilot.initialization",
+      "decision": "ALLOW",
+      "decisionReason": "intent allowed for IPR-0001: pilot.initialization",
+      "prevHash": null,
+      "hash": "7f4f8d2b2d2a1ef8c6d53a1f3f8a91b8a2b67d1c0f1a29c76f7d14b3f3c92a10"
+    },
+    {
+      "eventId": "EVT-0002",
+      "timestamp": "2026-03-26T12:00:05.000Z",
+      "identity": "IPR-0001",
+      "intent": "pilot.execution",
+      "decision": "ALLOW",
+      "decisionReason": "intent allowed for IPR-0001: pilot.execution",
+      "prevHash": "7f4f8d2b2d2a1ef8c6d53a1f3f8a91b8a2b67d1c0f1a29c76f7d14b3f3c92a10",
+      "hash": "ed8a38f9c0de7ab9be81e4cb56d8c0863a5ab53d6b53f5f2cbce1d4a3f8b5e29"
+    },
+    {
+      "eventId": "EVT-0003",
+      "timestamp": "2026-03-26T12:00:10.000Z",
+      "identity": "IPR-0001",
+      "intent": "pilot.shutdown",
+      "decision": "BLOCK",
+      "decisionReason": "intent not allowed for IPR-0001: pilot.shutdown",
+      "prevHash": "ed8a38f9c0de7ab9be81e4cb56d8c0863a5ab53d6b53f5f2cbce1d4a3f8b5e29",
+      "hash": "4a31f3b7f87f2f53a60716be14bc6ebfc7d4f0c1dd3fc4a66acb8f85f0f8a713"
+    }
+  ],
+  "verification": {
+    "ok": true,
+    "reason": "continuity verified"
+  }
+}
