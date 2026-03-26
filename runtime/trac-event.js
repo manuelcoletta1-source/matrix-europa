@@ -1,5 +1,6 @@
 import crypto from "node:crypto";
 import { validateIpr } from "./ipr-check.js";
+import { evaluateDecision } from "./decision-gate.js";
 
 function sha256(value) {
   return crypto.createHash("sha256").update(value).digest("hex");
@@ -20,13 +21,14 @@ function buildEventId(index) {
   return `EVT-${String(index).padStart(4, "0")}`;
 }
 
-function createTracEvent({ index, prevEvent = null, ipr, intent, decision }) {
+function createTracEvent({ index, prevEvent = null, ipr, intent }) {
   const iprValidation = validateIpr(ipr);
 
   if (!iprValidation.ok) {
     throw new Error(`IPR validation failed: ${iprValidation.reason}`);
   }
 
+  const decisionResult = evaluateDecision({ ipr, intent });
   const timestamp = new Date().toISOString();
 
   const payload = {
@@ -34,7 +36,8 @@ function createTracEvent({ index, prevEvent = null, ipr, intent, decision }) {
     timestamp,
     identity: ipr.id,
     intent,
-    decision,
+    decision: decisionResult.decision,
+    decisionReason: decisionResult.reason,
     prevHash: prevEvent ? prevEvent.hash : null
   };
 
@@ -64,6 +67,7 @@ function verifyChain(events) {
         identity: currentEvent.identity,
         intent: currentEvent.intent,
         decision: currentEvent.decision,
+        decisionReason: currentEvent.decisionReason,
         prevHash: currentEvent.prevHash
       })
     );
@@ -111,16 +115,14 @@ const demoIpr = {
 const event1 = createTracEvent({
   index: 1,
   ipr: demoIpr,
-  intent: "pilot.initialization",
-  decision: "ALLOW"
+  intent: "pilot.initialization"
 });
 
 const event2 = createTracEvent({
   index: 2,
   prevEvent: event1,
   ipr: demoIpr,
-  intent: "pilot.execution",
-  decision: "ALLOW"
+  intent: "pilot.execution"
 });
 
 const chain = [event1, event2];
